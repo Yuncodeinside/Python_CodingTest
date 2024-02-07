@@ -13,4 +13,5 @@ def solution(arr):
     
     return answer
 
+
 print(solution([1,1,2,3,1]))
