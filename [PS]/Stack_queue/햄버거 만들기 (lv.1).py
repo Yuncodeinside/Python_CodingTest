@@ -9,7 +9,7 @@ def solution(ingredient):
             answer+=1
             #햄버거의 개수 추가
             for j in range(4):
-                h.pop() #원소 4개 제외
+                h.pop() #원소 4개 제외 0,1,2,3
                 #print(h)
                 
     return answer
