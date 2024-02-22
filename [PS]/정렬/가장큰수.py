@@ -1,7 +1,7 @@
 def solution(numbers):
     
     #각 숫자를 문자열로 변환 후 str()
-    # map -> list 로 변환
+    # map 객체를 -> list 로 변환함
     numbers = list(map(str, numbers))
     print(numbers)
     
