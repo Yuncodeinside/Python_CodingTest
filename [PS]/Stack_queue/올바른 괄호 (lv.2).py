@@ -17,3 +17,4 @@ def solution(s):
     return len(st) == 0
 
 print(solution(")("))
+
