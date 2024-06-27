@@ -1,17 +1,25 @@
-from collections import deque
+from math import ceil
 
-def solution(progresses, speeds): #작업 진도 및 작업 속도 배열을 받음
-    days= []
+#zip()
+#ceil()
+
+def solution(progress, speeds):
+    days = [ceil((100-progress)/speeds) for progress , speeds in zip(progress,speeds)]
+    
     answer = []
+    max = days[0]
+    count = 0
     
-    Speeds = 0 # 개발 속도
-    
-    for i in range(0, len(progresses)):
-        # ceil 반올림 메서드
-        days.append(math.ceil((100-progresses[i])/speeds))
-    
-    
-    
-    
+    for day in days:
+        if day > max:
+            answer.append(count)
+            count = 1
+            max = day
+        else:
+            count+=1
+        
+    answer.append(count)
     
     return answer
+
+
